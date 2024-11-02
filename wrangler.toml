@@ -1,0 +1,13 @@
+name = "text-generation"
+main = "src/worker.js"
+compatibility_date = "2024-10-31"
+workers_dev = true
+
+[vars]
+ACCOUNT_ID = "16ebbb7d496e2b45036ca7df96bace59"
+API_KEY = "sk-FUFts6Kh7WsH9n0HyFHrN1hli9LN3hiDMfAinflcofZfRoN3"
+API_TOKEN = "KGDoR2fkhgSlt5qHH-ckPG8VNwIyldq_ot6tadvd"
+STREAM = "1"
+
+[ai]
+binding = "AI"
