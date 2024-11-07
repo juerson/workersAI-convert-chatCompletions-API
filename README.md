@@ -72,7 +72,6 @@ https://text-generation.<用户名>.workers.dev/v1/chat/completions
 	<summary>点击查看</summary>
 	<img src="images\ChatBox中，修改接口地址.gif" style="zoom:50%;" />
 </details>
-
 ## 三、文本生成模型对照表
 
 | Model Name                               | Model Identifier                            |
@@ -124,7 +123,14 @@ https://text-generation.<用户名>.workers.dev/v1/chat/completions
 | openhermes-2.5-mistral-7b-awq            | @hf/thebloke/openhermes-2.5-mistral-7b-awq |
 | zephyr-7b-beta-awq                       | @hf/thebloke/zephyr-7b-beta-awq             |
 
-表格数据来源：[Link](https://developers.cloudflare.com/api/)
+表格数据来源：[Link](https://developers.cloudflare.com/api/)；也可以查看Workers AI的Text Generation模型：[Link](https://developers.cloudflare.com/workers-ai/models/)
+**注意：**
+
+**1、这里的罗列的所有模型，并不是都能使用，特别是第一次使用时，无法使用，怀疑是否能代码有问题，我也遇到，但是换成其他模型时，就能使用了。**
+
+**2、如果Cloudflare推出新的Text Generation模型，在这个表格找不到，就需要在代码中手动添加。**
+
+**3、普通用户只需要表格左侧的模型名称。**
 
 <details>
 	<summary>点击查看</summary>
@@ -135,7 +141,7 @@ https://text-generation.<用户名>.workers.dev/v1/chat/completions
 
 1、一些可以自定义**OpenAI接口地址**的插件或软件，修改成自己部署的 Worker/Pages 地址，以及输入正确的 API KEY 密钥后，依然无法使用（更换其他软件能使用）。比如：[沉浸式翻译](https://immersivetranslate.com/) 无法使用。
 
-2、生成的文本，设置为流式输出，凡是文本含有**转义字符**的情况，可能无法准确处理（过度删除转义字符、错误保留转义字符的反斜杆）。
+2、生成的文本，设置为流式输出，凡是文本含有**转义字符**的情况，可能无法准确处理，可能出现乱码（过度删除转义字符、错误保留转义字符的反斜杆）。
 
 3、注意：代码中TEXT_GENERATION_MODELS，设置的**文本生成模型**可能会失效，同时，在 [NextChat](https://app.nextchat.dev/)、[Chatbox](https://web.chatboxai.app/) 、[ChatGPT-MJ](https://vercel.ddaiai.com/) 软件中，设置自定义模型时，一定要按照TEXT_GENERATION_MODELS的key键一字不差地写，如果key键对应的@某某模型被Cloudflare限用或删除，依然发送消息会报错，无法获取生成的文本内容。
 
