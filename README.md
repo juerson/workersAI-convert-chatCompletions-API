@@ -136,6 +136,7 @@ https://text-generation.<用户名>.workers.dev/v1/chat/completions
 | zephyr-7b-beta-awq                       | @hf/thebloke/zephyr-7b-beta-awq             |
 
 表格数据来源：[Link](https://developers.cloudflare.com/api/)；也可以查看Workers AI的Text Generation模型：[Link](https://developers.cloudflare.com/workers-ai/models/)
+
 **注意：**
 
 **1、这里的罗列的所有模型，并不是都能使用，特别是第一次使用时，无法使用，怀疑是否能代码有问题，我也遇到，但是换成其他模型时，就能使用了。**
