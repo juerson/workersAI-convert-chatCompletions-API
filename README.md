@@ -73,7 +73,9 @@ https://text-generation.<用户名>.workers.dev/v1/chat/completions
 	<img src="images\ChatBox中，修改接口地址.gif" style="zoom:50%;" />
 </details>
 
-#### 2.4 [cherry-studio](https://github.com/kangfenmao/cherry-studio)
+#### 2.4 cherry-studio
+
+下载地址：[Link](https://github.com/kangfenmao/cherry-studio)
 
 <details>
 	<summary>点击查看</summary>
