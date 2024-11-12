@@ -1,4 +1,4 @@
-本Cloudflare Worker/Pages部署代码的功能，将 Workers AI 的**文本生成推理模型**的调用接口，转换为 OpenAI Chat Completion 接口，提供给 [NextChat](https://app.nextchat.dev/)、[Chatbox](https://web.chatboxai.app/) 、[ChatGPT-MJ](https://vercel.ddaiai.com/) 等软件使用（支持修改自定义接口地址和自定义模型的软件）。
+本Cloudflare Worker/Pages部署代码的功能，将 Workers AI 的**文本生成推理模型**的调用接口，转换为 OpenAI Chat Completion 接口，提供给 [NextChat](https://app.nextchat.dev/)、[Chatbox](https://web.chatboxai.app/) 、[ChatGPT-MJ](https://vercel.ddaiai.com/) 、[cherry-studio](https://github.com/kangfenmao/cherry-studio)等软件使用（支持修改自定义接口地址和自定义模型的软件）。
 
 将`_worker.js`代码托管到Cloudflare的Workers或Pages后，按照下面内容操作。
 
@@ -72,6 +72,16 @@ https://text-generation.<用户名>.workers.dev/v1/chat/completions
 	<summary>点击查看</summary>
 	<img src="images\ChatBox中，修改接口地址.gif" style="zoom:50%;" />
 </details>
+
+#### 2.4 [cherry-studio](https://github.com/kangfenmao/cherry-studio)
+
+<details>
+	<summary>点击查看</summary>
+	<img src="images\cherry-studio中配置.gif" />
+	<img src="images\cherry-studio中聊天.gif" style="zoom:50%;" />
+</details>
+
+
 ## 三、文本生成模型对照表
 
 | Model Name                               | Model Identifier                            |
@@ -141,7 +151,7 @@ https://text-generation.<用户名>.workers.dev/v1/chat/completions
 
 1、一些可以自定义**OpenAI接口地址**的插件或软件，修改成自己部署的 Worker/Pages 地址，以及输入正确的 API KEY 密钥后，依然无法使用（更换其他软件能使用）。比如：[沉浸式翻译](https://immersivetranslate.com/) 无法使用。
 
-2、生成的文本，设置为流式输出，凡是文本含有**转义字符**的情况，可能无法准确处理，可能出现乱码（过度删除转义字符、错误保留转义字符的反斜杆）。
+2、生成的文本，设置为**流式输出**，凡是文本含有**转义字符**的情况，可能无法准确处理，可能出现乱码（过度删除转义字符、错误保留转义字符的反斜杆），**建议使用非流式输出**。
 
 3、注意：代码中TEXT_GENERATION_MODELS，设置的**文本生成模型**可能会失效，同时，在 [NextChat](https://app.nextchat.dev/)、[Chatbox](https://web.chatboxai.app/) 、[ChatGPT-MJ](https://vercel.ddaiai.com/) 软件中，设置自定义模型时，一定要按照TEXT_GENERATION_MODELS的key键一字不差地写，如果key键对应的@某某模型被Cloudflare限用或删除，依然发送消息会报错，无法获取生成的文本内容。
 
