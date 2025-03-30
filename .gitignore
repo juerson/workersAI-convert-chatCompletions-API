@@ -1,3 +1,7 @@
+models2json/target
+.vscode/
+.trunk/
+
 # Logs
 
 logs
