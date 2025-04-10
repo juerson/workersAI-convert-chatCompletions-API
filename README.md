@@ -86,56 +86,54 @@ https://text-generation.<用户名>.workers.dev/v1/chat/completions
 
 ## 三、文本生成模型对照表
 
-| Model Name                               | Model Identifier                            |
-|------------------------------------------|--------------------------------------------|
-| deepseek-math-7b-instruct                | @cf/deepseek-ai/deepseek-math-7b-instruct |
-| sqlcoder-7b-2                            | @cf/defog/sqlcoder-7b-2                    |
-| una-cybertron-7b-v2-bf16                 | @cf/fblgit/una-cybertron-7b-v2-bf16       |
-| gemma-2b-it-lora                        | @cf/google/gemma-2b-it-lora                |
-| gemma-7b-it-lora                        | @cf/google/gemma-7b-it-lora                |
-| llama-2-7b-chat-hf-lora                 | @cf/meta-llama/llama-2-7b-chat-hf-lora    |
-| llama-2-7b-chat-fp16                     | @cf/meta/llama-2-7b-chat-fp16              |
-| llama-2-7b-chat-int8                     | @cf/meta/llama-2-7b-chat-int8              |
-| llama-3-8b-instruct                      | @cf/meta/llama-3-8b-instruct               |
-| llama-3-8b-instruct-awq                  | @cf/meta/llama-3-8b-instruct-awq           |
-| llama-3.1-70b-instruct                   | @cf/meta/llama-3.1-70b-instruct            |
-| llama-3.1-70b-instruct-preview           | @cf/meta/llama-3.1-70b-instruct-preview    |
-| llama-3.1-70b-preview                    | @cf/meta/llama-3.1-70b-preview             |
-| llama-3.1-8b-instruct                    | @cf/meta/llama-3.1-8b-instruct             |
-| llama-3.1-8b-instruct-awq                | @cf/meta/llama-3.1-8b-instruct-awq         |
-| llama-3.1-8b-instruct-fast               | @cf/meta/llama-3.1-8b-instruct-fast        |
-| llama-3.1-8b-instruct-fp8                | @cf/meta/llama-3.1-8b-instruct-fp8         |
-| llama-3.1-8b-preview                     | @cf/meta/llama-3.1-8b-preview              |
-| llama-3.2-11b-vision-instruct            | @cf/meta/llama-3.2-11b-vision-instruct     |
-| llama-3.2-1b-instruct                    | @cf/meta/llama-3.2-1b-instruct             |
-| llama-3.2-3b-instruct                    | @cf/meta/llama-3.2-3b-instruct             |
-| phi-2                                    | @cf/microsoft/phi-2                         |
-| mistral-7b-instruct-v0.1                 | @cf/mistral/mistral-7b-instruct-v0.1      |
-| mistral-7b-instruct-v0.2-lora            | @cf/mistral/mistral-7b-instruct-v0.2-lora |
-| openchat-3.5-0106                        | @cf/openchat/openchat-3.5-0106             |
-| qwen1.5-0.5b-chat                        | @cf/qwen/qwen1.5-0.5b-chat                 |
-| qwen1.5-1.8b-chat                        | @cf/qwen/qwen1.5-1.8b-chat                 |
-| qwen1.5-14b-chat-awq                     | @cf/qwen/qwen1.5-14b-chat-awq              |
-| qwen1.5-7b-chat-awq                      | @cf/qwen/qwen1.5-7b-chat-awq               |
-| discolm-german-7b-v1-awq                 | @cf/thebloke/discolm-german-7b-v1-awq      |
-| falcon-7b-instruct                       | @cf/tiiuae/falcon-7b-instruct              |
-| tinyllama-1.1b-chat-v1.0                 | @cf/tinyllama/tinyllama-1.1b-chat-v1.0    |
-| gemma-7b-it                              | @hf/google/gemma-7b-it                     |
-| meta-llama-3-8b-instruct                 | @hf/meta-llama/meta-llama-3-8b-instruct    |
-| mistral-7b-instruct-v0.2                 | @hf/mistral/mistral-7b-instruct-v0.2      |
-| mistral-7b-instruct-v0.2-ai              | @hf/mistralai/mistral-7b-instruct-v0.2    |
-| starling-lm-7b-beta                      | @hf/nexusflow/starling-lm-7b-beta          |
-| hermes-2-pro-mistral-7b                  | @hf/nousresearch/hermes-2-pro-mistral-7b   |
-| deepseek-coder-6.7b-base-awq             | @hf/thebloke/deepseek-coder-6.7b-base-awq  |
-| deepseek-coder-6.7b-instruct-awq         | @hf/thebloke/deepseek-coder-6.7b-instruct-awq |
-| llama-2-13b-chat-awq                     | @hf/thebloke/llama-2-13b-chat-awq          |
-| llamaguard-7b-awq                        | @hf/thebloke/llamaguard-7b-awq             |
-| mistral-7b-instruct-v0.1-awq             | @hf/thebloke/mistral-7b-instruct-v0.1-awq  |
-| neural-chat-7b-v3-1-awq                  | @hf/thebloke/neural-chat-7b-v3-1-awq       |
-| openhermes-2.5-mistral-7b-awq            | @hf/thebloke/openhermes-2.5-mistral-7b-awq |
-| zephyr-7b-beta-awq                       | @hf/thebloke/zephyr-7b-beta-awq             |
-
-表格数据来源：[Link](https://developers.cloudflare.com/api/)；也可以查看Workers AI的Text Generation模型：[Link](https://developers.cloudflare.com/workers-ai/models/)
+| Model Name                       | Model Identifier                              |
+| -------------------------------- | --------------------------------------------- |
+| bge-reranker-base                | @cf/baai/bge-reranker-base                    |
+| deepseek-coder-6.7b-base-awq     | @hf/thebloke/deepseek-coder-6.7b-base-awq     |
+| deepseek-coder-6.7b-instruct-awq | @hf/thebloke/deepseek-coder-6.7b-instruct-awq |
+| deepseek-math-7b-instruct        | @cf/deepseek-ai/deepseek-math-7b-instruct     |
+| deepseek-r1-distill-qwen-32b     | @cf/deepseek-ai/deepseek-r1-distill-qwen-32b  |
+| discolm-german-7b-v1-awq         | @cf/thebloke/discolm-german-7b-v1-awq         |
+| falcon-7b-instruct               | @cf/tiiuae/falcon-7b-instruct                 |
+| gemma-2b-it-lora                 | @cf/google/gemma-2b-it-lora                   |
+| gemma-7b-it                      | @hf/google/gemma-7b-it                        |
+| gemma-7b-it-lora                 | @cf/google/gemma-7b-it-lora                   |
+| hermes-2-pro-mistral-7b          | @hf/nousresearch/hermes-2-pro-mistral-7b      |
+| llama-2-13b-chat-awq             | @hf/thebloke/llama-2-13b-chat-awq             |
+| llama-2-7b-chat-fp16             | @cf/meta/llama-2-7b-chat-fp16                 |
+| llama-2-7b-chat-hf-lora          | @cf/meta-llama/llama-2-7b-chat-hf-lora        |
+| llama-2-7b-chat-int8             | @cf/meta/llama-2-7b-chat-int8                 |
+| llama-3-8b-instruct              | @cf/meta/llama-3-8b-instruct                  |
+| llama-3-8b-instruct-awq          | @cf/meta/llama-3-8b-instruct-awq              |
+| llama-3.1-8b-instruct            | @cf/meta/llama-3.1-8b-instruct                |
+| llama-3.1-8b-instruct-awq        | @cf/meta/llama-3.1-8b-instruct-awq            |
+| llama-3.1-8b-instruct-fast       | @cf/meta/llama-3.1-8b-instruct-fast           |
+| llama-3.1-8b-instruct-fp8        | @cf/meta/llama-3.1-8b-instruct-fp8            |
+| llama-3.2-11b-vision-instruct    | @cf/meta/llama-3.2-11b-vision-instruct        |
+| llama-3.2-1b-instruct            | @cf/meta/llama-3.2-1b-instruct                |
+| llama-3.2-3b-instruct            | @cf/meta/llama-3.2-3b-instruct                |
+| llama-3.3-70b-instruct-fp8-fast  | @cf/meta/llama-3.3-70b-instruct-fp8-fast      |
+| llama-4-scout-17b-16e-instruct   | @cf/meta/llama-4-scout-17b-16e-instruct       |
+| llama-guard-3-8b                 | @cf/meta/llama-guard-3-8b                     |
+| llamaguard-7b-awq                | @hf/thebloke/llamaguard-7b-awq                |
+| meta-llama-3-8b-instruct         | @hf/meta-llama/meta-llama-3-8b-instruct       |
+| mistral-7b-instruct-v0.1         | @cf/mistral/mistral-7b-instruct-v0.1          |
+| mistral-7b-instruct-v0.1-awq     | @hf/thebloke/mistral-7b-instruct-v0.1-awq     |
+| mistral-7b-instruct-v0.2         | @hf/mistral/mistral-7b-instruct-v0.2          |
+| mistral-7b-instruct-v0.2-lora    | @cf/mistral/mistral-7b-instruct-v0.2-lora     |
+| neural-chat-7b-v3-1-awq          | @hf/thebloke/neural-chat-7b-v3-1-awq          |
+| openchat-3.5-0106                | @cf/openchat/openchat-3.5-0106                |
+| openhermes-2.5-mistral-7b-awq    | @hf/thebloke/openhermes-2.5-mistral-7b-awq    |
+| phi-2                            | @cf/microsoft/phi-2                           |
+| qwen1.5-0.5b-chat                | @cf/qwen/qwen1.5-0.5b-chat                    |
+| qwen1.5-1.8b-chat                | @cf/qwen/qwen1.5-1.8b-chat                    |
+| qwen1.5-14b-chat-awq             | @cf/qwen/qwen1.5-14b-chat-awq                 |
+| qwen1.5-7b-chat-awq              | @cf/qwen/qwen1.5-7b-chat-awq                  |
+| sqlcoder-7b-2                    | @cf/defog/sqlcoder-7b-2                       |
+| starling-lm-7b-beta              | @hf/nexusflow/starling-lm-7b-beta             |
+| tinyllama-1.1b-chat-v1.0         | @cf/tinyllama/tinyllama-1.1b-chat-v1.0        |
+| una-cybertron-7b-v2-bf16         | @cf/fblgit/una-cybertron-7b-v2-bf16           |
+| zephyr-7b-beta-awq               | @hf/thebloke/zephyr-7b-beta-awq               |
 
 **注意：**
 
@@ -144,12 +142,14 @@ https://text-generation.<用户名>.workers.dev/v1/chat/completions
 **2、如果Cloudflare推出新的Text Generation模型，在这个表格找不到，就需要在代码中手动添加。**
 
 **3、普通用户只需要表格左侧的模型名称。**
-
 <details>
-	<summary>点击查看</summary>
-	<img src="images\TextGenerationModels.gif" style="zoom:50%;" />
+	<summary>点击查看模型来源1</summary>
+	<img src="images\Workers_AI_模型.gif" title="文本生成模型来源1"/>
 </details>
-
+<details>
+	<summary>点击查看模型来源2</summary>
+	<img src="images\Workers_AI_文档.gif" title="文本生成模型来源2" />
+</details>
 ## 四、问题
 
 1、一些可以自定义**OpenAI接口地址**的插件或软件，修改成自己部署的 Worker/Pages 地址，以及输入正确的 API KEY 密钥后，依然无法使用（更换其他软件能使用）。比如：[沉浸式翻译](https://immersivetranslate.com/) 无法使用。
